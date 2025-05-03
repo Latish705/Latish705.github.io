@@ -1,0 +1,104 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 262 83.3% 66.3%; /* Vivid Purple */
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 262 83.3% 66.3%; /* Vivid Purple */
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 262 83.3% 66.3%; /* Vivid Purple */
+    --radius: 0.75rem;
+  }
+
+  * {
+    @apply border-border selection:bg-purple-500/20 selection:text-white;
+  }
+  
+  html {
+    font-family: 'Inter', sans-serif;
+    @apply scroll-smooth scroll-pt-16;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+  
+  h1 {
+    @apply text-4xl sm:text-5xl md:text-6xl;
+  }
+  
+  h2 {
+    @apply text-3xl sm:text-4xl md:text-5xl;
+  }
+  
+  h3 {
+    @apply text-2xl sm:text-3xl;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 bg-purple-600 text-white rounded-lg font-medium hover:bg-purple-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-background;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-secondary text-white rounded-lg font-medium hover:bg-secondary/80 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-background;
+  }
+
+  .btn-outline {
+    @apply px-6 py-3 border border-purple-500 text-purple-500 rounded-lg font-medium hover:bg-purple-500/10 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-background;
+  }
+
+  .card {
+    @apply bg-secondary/50 backdrop-blur-md rounded-xl p-6 border border-white/5 hover:border-purple-500/30 transition-colors duration-300;
+  }
+
+  .section-heading {
+    @apply text-3xl md:text-4xl font-bold mb-8 text-white relative inline-block;
+  }
+  
+  .section-heading::after {
+    content: '';
+    @apply absolute -bottom-2 left-0 w-1/2 h-1 bg-purple-500 rounded-full;
+  }
+
+  .timeline-dot {
+    @apply absolute left-0 w-4 h-4 rounded-full bg-purple-500 z-10;
+  }
+
+  .timeline-line {
+    @apply absolute top-0 left-1.5 h-full w-0.5 bg-purple-500/30 -translate-x-1/2;
+  }
+}

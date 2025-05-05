@@ -42,38 +42,54 @@ const About: React.FC = () => {
 
   const educationTimeline: TimelineItem[] = [
     {
-      year: "2021-Present",
-      title: "Bachelor of Technology in Computer Science",
-      description: "University Institute of Technology, RGPV, Bhopal",
+      year: "Nov 2022 - Present",
+      title: "B.Tech. in Computer Science",
+      description:
+        "Vivekanand Education Society's Institute Of Technology (VESIT)",
     },
     {
-      year: "2019-2021",
-      title: "Higher Secondary Education",
-      description: "St. Joseph's Co-Ed School, Bhopal",
+      year: "2022",
+      title: "Higher Secondary - 60%",
+      description: "State Board Of Maharashtra",
+    },
+    {
+      year: "2020",
+      title: "Secondary - 83%",
+      description: "State Board Of Maharashtra",
     },
   ];
 
   const factCards: FactCard[] = [
     {
       title: "LeetCode",
-      value: "180+",
-      icon: "🏆",
+      value: "350+",
+      icon: "\uD83C\uDFC6",
     },
     {
       title: "Projects",
       value: "10+",
-      icon: "💻",
+      icon: "\uD83D\uDCBB",
     },
     {
       title: "Programming Languages",
-      value: "5+",
-      icon: "🔧",
+      value: "6+",
+      icon: "\uD83D\uDD27",
     },
     {
       title: "Dev Experience",
       value: "3+ years",
-      icon: "⚡",
+      icon: "\u26A1",
     },
+  ];
+
+  const interests = [
+    "Competitive Programming",
+    "Web Development",
+    "Cloud Computing",
+    "Open Source",
+    "Hackathons",
+    "Problem Solving",
+    "UI/UX Design",
   ];
 
   return (
@@ -153,46 +169,10 @@ const About: React.FC = () => {
               </div>
             ))}
 
-            <div className="mb-6">
-              <h3 className="text-xl font-bold mb-3 text-white">Education</h3>
-              <div className="space-y-4">
-                <div className="card">
-                  <h4 className="font-semibold text-white">
-                    B.Tech. (CSE) - 8.7 CGPA
-                  </h4>
-                  <p className="text-white/70">
-                    Vivekanand Education Society's Institute Of Technology
-                    (VESIT)
-                  </p>
-                  <p className="text-white/60 text-sm">Nov 2022 – Present</p>
-                </div>
-                <div className="card">
-                  <h4 className="font-semibold text-white">
-                    Higher Secondary - 60%
-                  </h4>
-                  <p className="text-white/70">State Board Of Maharashtra</p>
-                  <p className="text-white/60 text-sm">2022</p>
-                </div>
-                <div className="card">
-                  <h4 className="font-semibold text-white">Secondary - 83%</h4>
-                  <p className="text-white/70">State Board Of Maharashtra</p>
-                  <p className="text-white/60 text-sm">2020</p>
-                </div>
-              </div>
-            </div>
-
             <div className="mt-12 space-y-6">
               <h3 className="text-2xl font-bold mb-6">Interests</h3>
               <div className="flex flex-wrap gap-3">
-                {[
-                  "Competitive Programming",
-                  "Web Development",
-                  "Cloud Computing",
-                  "Open Source",
-                  "Hackathons",
-                  "Problem Solving",
-                  "UI/UX Design",
-                ].map((interest, index) => (
+                {interests.map((interest, index) => (
                   <span
                     key={index}
                     className="px-4 py-2 bg-secondary/80 text-white/80 rounded-full text-sm"
